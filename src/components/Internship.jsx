@@ -52,7 +52,7 @@ const Internship = () => {
                                         <img 
                                             src={project.image} 
                                             alt={project.name} 
-                                            className="w-28 h-28 rounded-full border-4 border-white transition-all duration-300 transform hover:scale-105" 
+                                            className="w-28 h-28 rounded-full border-4 border-white transition-all duration-300 transform hover:scale-105" loading="lazy"
                                         />
                                         <div>
                                             <h4 className="text-xl text-green mb-2">{project.name}</h4>
