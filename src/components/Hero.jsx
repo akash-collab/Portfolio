@@ -27,7 +27,7 @@ const imageVariants = {
 };
 
 const Hero = () => {
-  const resumeURL = "https://drive.google.com/uc?export=download&id=1N32-Uj8iubzjgztIHx6oG7tlwzgQ_Yml"; // Updated for direct download
+  const resumeURL = "https://drive.google.com/drive/folders/1N2E3ZNrzSqZv9Q8GqljMbXO8fRPUu925"; // Updated for direct download
 
   return (
     <section>
