@@ -36,7 +36,7 @@ const Projects = () => {
                         <img
                             src={project.image}
                             alt={project.name}
-                            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300" />
+                            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300" loading="lazy" />
 
                         <div className="relative z-20 p-6 flex flex-col justify-between h-full bg-black/30 text-white">
                             <h2 className="text-2xl font-medium mb-4">{project.name}</h2>
