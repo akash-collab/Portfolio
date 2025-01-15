@@ -3,12 +3,12 @@ import { PROJECTS } from "../constants/index"
 const Projects = () => {
     const projectVariants = {
         hidden: {
-            opacity: 0, scale: 0.8, rotate: -40, y: 50
+            opacity: 0, scale: 0.8, y: 50
         },
         visible: {
             opacity: 1,
             scale: 1,
-            rotate: 0,
+            // rotate: 0,
             y: 0,
             transition: {
                 duration: 0.6,
@@ -28,7 +28,7 @@ const Projects = () => {
                 {PROJECTS.map((project, index) => (
                     <motion.div
                         key={index}
-                        className="relative rounded-lg overflow-hidden h-[500px] transition transform"
+                        className="relative rounded-lg overflow-hidden h-[500px] transform"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
