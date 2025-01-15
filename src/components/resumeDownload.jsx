@@ -1,7 +1,7 @@
 import QRCode from "qrcode.react";
 
 const ResumeDownload = () => {
-  const resumeUrl = "https://drive.google.com/drive/folders/1N2E3ZNrzSqZv9Q8GqljMbXO8fRPUu925"; 
+  const resumeUrl = "https://drive.google.com/file/d/1NHAgJ8gk8oVlk_6rah1BgIn7L1Bj3x3G/view?usp=drivesdk"; 
 
   return (
     <section className="px-6 py-10" id="resume-download">
