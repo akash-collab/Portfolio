@@ -91,7 +91,7 @@ const Hero = () => {
             alt="Akash Paul"
             width={500}
             height={500}
-            className="rounded-3xl"
+            className="rounded-3xl" loading="lazy"
           />
         </motion.div>
       </div>
