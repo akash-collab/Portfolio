@@ -79,7 +79,7 @@ const Contacts = () => {
                                 <img
                                     src={link.icon}
                                     alt={`${link.platform} icon`}
-                                    className="w-9 h-9"
+                                    className="w-9 h-9" loading="lazy"
                                 />
                             </motion.a>
                         );
