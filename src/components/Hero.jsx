@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { HERO_CONTENT } from "../constants/index";
 import QRCode from "react-qr-code"; 
-import akash from "../assets/akash_paul.jpg";
+import akash from "../assets/akash_paul.webp";
 import "../index.css";
 
 const textvariants = {
