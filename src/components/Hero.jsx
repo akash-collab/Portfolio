@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { HERO_CONTENT } from "../constants/index";
 import QRCode from "react-qr-code"; 
-import akash from "../assets/akash_paul.webp";
+import akash from "../assets/akash_paul.jpg";
+import "../index.css";
 
 const textvariants = {
   hidden: { opacity: 0, y: 50 },
@@ -22,7 +23,7 @@ const imageVariants = {
   },
   visible: {
     clipPath: "inset(0 0% 0 0%)",
-    transition: { duration: 1.2, ease: "easeInOut" },
+    transition: { duration: 1.6, ease: "easeIn" },
   },
 };
 
@@ -91,7 +92,8 @@ const Hero = () => {
             alt="Akash Paul"
             width={500}
             height={500}
-            className="rounded-3xl" loading="lazy"
+            className="rounded-3xl"
+            loading="lazy"
           />
         </motion.div>
       </div>
