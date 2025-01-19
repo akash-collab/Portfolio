@@ -1,77 +1,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{
-    font-family:"Inter",sans-serif ;
-    font-optical-sizing: auto;
-    background:#000000;
-    color:#ffffff;
-    scroll-behavior: smooth;
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  background: #000000;
+  color: #ffffff;
+  scroll-behavior: smooth;
 }
-.bg-image{
-    background-image:url("./assets/jason-root.webp");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.bg-image {
+  background-image: url("./assets/jason-root.webp");
 }
-#work, #about, #experience, #testimonials,#contact{
-    scroll-margin-top:88px;
+
+.roboto-font {
+  font-family: 'Roboto', sans-serif;
 }
+
+#work,
+#about,
+#experience,
+#testimonials,
+#contact {
+  scroll-margin-top: 88px;
+}
+
 /* Fade In Effect */
 @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
   }
-  
-  .animated-fade-in {
-    animation: fade-in 1.2s ease-in-out forwards;
+
+  to {
+    opacity: 1;
   }
-  
-  /* Slide Up Effect */
-  @keyframes slide-up {
-    from {
-      transform: translateY(30px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+}
+
+.animated-fade-in {
+  animation: fade-in 1.2s ease-in-out forwards;
+}
+
+/* Slide Up Effect */
+@keyframes slide-up {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
   }
-  
-  .animated-slide-up {
-    animation: slide-up 1.2s ease-in-out forwards;
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Slide In from Left */
-  @keyframes slide-in-left {
-    from {
-      transform: translateX(-30px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+}
+
+.animated-slide-up {
+  animation: slide-up 1.2s ease-in-out forwards;
+}
+
+/* Slide In from Left */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
   }
-  
-  .animated-slide-in-left {
-    animation: slide-in-left 1.2s ease-in-out forwards;
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  /* Scale In Effect */
-  @keyframes scale-in {
-    from {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
+}
+
+.animated-slide-in-left {
+  animation: slide-in-left 1.2s ease-in-out forwards;
+}
+
+/* Scale In Effect */
+@keyframes scale-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
   }
-  
-  .animated-scale-in {
-    animation: scale-in 1.2s ease-in-out forwards;
+
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
+}
+
+.animated-scale-in {
+  animation: scale-in 1.2s ease-in-out forwards;
+}
