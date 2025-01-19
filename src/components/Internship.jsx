@@ -59,7 +59,7 @@ const Internship = () => {
                                             <p className="text-gray-300 text-sm mb-4">{project.desc}</p>
                                             <a 
                                                 href={project.url} 
-                                                className="bg-white text-black py-2 px-4 rounded-full  transition-all duration-300 hover:bg-gray-300"
+                                                className="bg-white text-black py-2 px-4 rounded-full  transition-all duration-300 hover:bg-gray-300 whitespace-nowrap w-full"
                                                 target="_blank" 
                                                 rel="noopener noreferrer">
                                                 See on GitHub
