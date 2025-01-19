@@ -8,6 +8,7 @@ import About from "./components/About";
 import Education from "./components/Education";
 import Internship from "./components/Internship";
 import Contacts from "./components/Contacts";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const App = () => {
   const vantaRef = useRef(null);
@@ -39,6 +40,7 @@ const App = () => {
     <div ref={vantaRef} className="relative min-h-screen text-white">
       <Navbar />
       <main className="antialiased overflow-x-hidden max-w-7xl mx-auto relative z-10">
+        <SpeedInsights />
         <Navbar />
         <Hero />
         <Projects />
