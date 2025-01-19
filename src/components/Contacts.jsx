@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { CONTACT_CONTENT } from "../constants/index"
 import { RiTwitterXFill, RiGithubFill, RiLinkedinFill } from "react-icons/ri";
-import leetcode from "../assets/leetcode.png"; // Import the image
+import leetcode from "../assets/leetcode.png"; 
 
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -9,7 +9,7 @@ const textVariants = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.8,
+            duration: 0.2,
             ease: "easeOut",
             delay,
         }
@@ -111,10 +111,10 @@ const Contacts = () => {
                 })}
             </div>
             <motion.p
-                className="text-sm text-stone-400 mt-36"
+                className="text-sm text-white mt-36"
                 initial="hidden"
                 whileInView="visible"
-                custom={1.6}
+                custom={1}
                 variants={textVariants}>
                     {CONTACT_CONTENT.footerText}
                 </motion.p>

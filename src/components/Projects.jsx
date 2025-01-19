@@ -9,6 +9,7 @@ const Projects = () => {
             opacity: 1,
             scale: 1,
             // rotate: 0,
+            // rotate: 0,
             y: 0,
             transition: {
                 duration: 0.6,
@@ -19,7 +20,7 @@ const Projects = () => {
         }
     }
     return (
-        <section className="px-6 py-16" id="work">
+        <section className="px-6 py-16 my-6" id="work">
             <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-10">
                 Work
             </h1>
@@ -36,17 +37,19 @@ const Projects = () => {
                         <img
                             src={project.image}
                             alt={project.name}
-                            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300" loading="lazy" />
+                            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+                            loading="lazy"
+                        />
 
                         <div className="relative z-20 p-6 flex flex-col justify-between h-full bg-black/30 text-white">
                             <h2 className="text-2xl font-medium mb-4">{project.name}</h2>
                             <div className="flex flex-col justify-between">
                                 <p className="mb-4 flex-grow text-2xl">{project.description}</p>
-                                <a href={project.link} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
+                                <a href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="bg-white text-stone-900 rounded-full py-2 px-2 w-32 text-sm hover:bg-gray-300 text-center">
-                                        View On Github
+                                    View On Github
                                 </a>
                             </div>
                         </div>

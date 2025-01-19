@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@remixicon/react": "^4.6.0",
+    "@types/three": "^0.172.0",
     "framer-motion": "^11.15.0",
     "qrcode.react": "^4.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
-    "react-qr-code": "^2.0.15"
+    "react-qr-code": "^2.0.15",
+    "three": "^0.172.0",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
