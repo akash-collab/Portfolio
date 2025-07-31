@@ -57,17 +57,12 @@ const Hero = () => {
           {HERO_CONTENT.greeting}
         </motion.h1>
 
-        {/* Typewriter Effect with Reserved Space */}
+        {/* Typewriter Effect */}
         <motion.div
           className="relative mb-4 text-xl md:text-2xl lg:text-4xl text-white"
           variants={textVariants}
         >
-          {/* Reserve space without removing it from layout flow */}
-          <div className="invisible block">
-            {HERO_CONTENT.introduction}
-          </div>
-
-          {/* Actual typewriter animation */}
+          <div className="invisible block">{HERO_CONTENT.introduction}</div>
           <div className="absolute top-0 left-0">
             <Typewriter
               words={[HERO_CONTENT.introduction]}
@@ -104,27 +99,27 @@ const Hero = () => {
             {HERO_CONTENT.resumeLinkText}
           </a>
 
-          <div className="ml-4 hidden sm:block">
-            <QRCode value={resumeURL} size={100} />
+          <div className="ml-4 hidden sm:block text-center">
+            <div className="p-2 border-2 border-white rounded-lg shadow-lg bg-white inline-block">
+              <QRCode value={resumeURL} size={100} />
+            </div>
+            <p className="mt-2 text-xl text-white font-semibold">Scan Here</p>
           </div>
         </motion.div>
       </motion.div>
 
-      {/* Image Section with Hover Animation */}
+      {/* Image Section */}
       <motion.div
         className="w-full md:w-1/2 p-8 flex justify-center items-center"
         initial="hidden"
         animate="visible"
         variants={imageVariants}
-        whileHover={{ scale: 1.05, rotate: 2 }}
-        whileTap={{ scale: 0.98 }}
+        whileHover={{ scale: 0.98, rotate: 2 }}
       >
         <motion.img
           src={akash}
           alt="Akash Paul"
-          width={500}
-          height={500}
-          className="rounded-3xl shadow-lg"
+          className="rounded-3xl shadow-lg w-[300px] md:w-[350px] lg:w-[400px] h-auto object-cover"
           loading="lazy"
         />
       </motion.div>

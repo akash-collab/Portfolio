@@ -2,14 +2,23 @@ import QRCode from "qrcode.react";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const ResumeDownload = () => {
-  const resumeUrl = "https://drive.google.com/uc?export=download&id=1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj";
-  const resumeViewUrl = "https://drive.google.com/file/d/1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj/preview";
+  const resumeUrl =
+    "https://drive.google.com/uc?export=download&id=1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj";
+  const resumeViewUrl =
+    "https://drive.google.com/file/d/1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj/preview";
 
-  const linkedinShare = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(resumeUrl)}&title=Check%20out%20my%20resume!`;
-  const emailShare = `mailto:?subject=My%20Resume&body=Hi,%20check%20out%20my%20resume%20here:%20${encodeURIComponent(resumeUrl)}`;
+  const linkedinShare = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+    resumeUrl
+  )}&title=Check%20out%20my%20resume!`;
+  const emailShare = `mailto:?subject=My%20Resume&body=Hi,%20check%20out%20my%20resume%20here:%20${encodeURIComponent(
+    resumeUrl
+  )}`;
 
   return (
-    <section className="px-6 py-16 bg-stone-900 text-white" id="resume-download">
+    <section
+      className="px-6 py-16 bg-stone-900 text-white"
+      id="resume-download"
+    >
       <div className="max-w-5xl mx-auto text-center">
         {/* Heading */}
         <h2 className="text-4xl md:text-6xl font-semibold tracking-tight mb-4">
@@ -20,15 +29,20 @@ const ResumeDownload = () => {
           Scan the QR code, preview the PDF, or download directly below.
         </p>
 
-        {/* QR Code */}
+        {/* QR Code with decorative corners */}
         <div className="flex justify-center mb-8">
-          <QRCode
-            value={resumeUrl}
-            size={180}
-            bgColor="#f9fafb"
-            fgColor="#1f2937"
-            includeMargin={true}
-          />
+          <div className="relative p-3 bg-white rounded-md shadow-lg">
+            <QRCode
+              value={resumeUrl}
+              size={180}
+              bgColor="#ffffff"
+              fgColor="#1f2937"
+              includeMargin={false}
+            />
+            {/* Decorative Corners */}
+            <div className="absolute top-2 left-2 w-5 h-5 border-t-4 border-l-4 border-stone-100 rounded-tl-sm"></div>
+            <div className="absolute bottom-2 right-2 w-5 h-5 border-b-4 border-r-4 border-stone-100 rounded-br-sm"></div>
+          </div>
         </div>
 
         {/* Resume Embed */}

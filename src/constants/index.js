@@ -30,22 +30,25 @@ export const HERO_CONTENT = {
 
 export const PROJECTS = [
   {
-    name: "Socify",
-    description: "A Full Stack Social Media App",
+    name: "BookVerse",
+    description: "A Book App",
     image: projects1,
-    link: "https://github.com/your-github/streamerzz",
+    link: "https://github.com/akash-collab/bookverse",
+    deploy:"https://bookverse-beta.vercel.app/"
   },
   {
-    name: "Chatios",
-    description: "An Interactive and Real-Time Chat Application",
+    name: "Loan Application System",
+    description: "An Interactive and Real-Time Loan Application",
     image: projects2,
-    link: "https://github.com/your-github/nutritrack",
+    link: "https://github.com/akash-collab/Loan-Application-System",
+    deploy:"https://loan-application-system-lovat.vercel.app/"
   },
   {
-    name: "College App",
-    description: "An Android App to fecilitate the seamless connectivity between Students and Teachers ",
+    name: "MealMaster App",
+    description: "Personalized meal planner with AI. ",
     image: projects3,
-    link: "https://github.com/akash-collab/College-App",
+    link: "https://github.com/akash-collab/MealMaster",
+    deploy:"https://mealmaster-frontend.onrender.com"
   },
   {
     name: "Weather App",
@@ -53,6 +56,7 @@ export const PROJECTS = [
       "Real-time Weather App providing accurate forecasts",
     image: projects4,
     link: "https://github.com/akash-collab/Weather-Website",
+    deploy:""
   },
   {
     name: "Creator's Analysis Tool",
@@ -65,18 +69,29 @@ export const PROJECTS = [
     description: "An App for coffee Enthusiasts.",
     image: projects6,
     link: "https://github.com/akash-collab/Coffee_Shop_Full_Responsive_Website",
+    deploy:"coffee-shop-full-responsive-website.vercel.app"
   },
 ];
 
 export const ABOUT_CONTENT = {
   paragraphs: [
-    "Motivated and adaptable software developer with expertise in  Java, JavaScript,React Js, Node.js, and API integration. With a strong foundation in software development and problem-solving, I excel in creating efficient,user-focused solutions. A fast learner and effective collaborator, I am eager to contribute for an Organization for the growth of both of us.",
+    "A passionate problem-solver and creative thinker, I thrive on transforming ideas into real-world applications that make a difference. With a strong foundation in software development, I enjoy building intuitive and efficient solutions that prioritize user experience and performance. Adaptable and quick to learn, I bring a collaborative spirit to every project I’m part of.",
 
-    "I specialize in using technologies like React, Next.js, and Tailwind CSS to create responsive and scalable interfaces. My focus is on writing clean, maintainable code while collaborating with cross-functional teams to deliver projects that meet both business goals and user needs. I thrive in environments that challenge me to continuously learn and grow.",
+    "I specialize in building dynamic, responsive web interfaces using React, Next.js, and Tailwind CSS. I believe in writing clean, scalable code and aligning development with real user needs and business goals. Whether working independently or with cross-functional teams, I’m always focused on delivering impactful results and continuously growing as a developer.",
   ],
 };
 
 export const EDUCATION = [
+  {
+    yearRange: "2025",
+    title: "Full-Stack Web Development",
+    location: "MASAI School, Bangalore",
+    description: [
+      "Completed a 35-week intensive training program focused on full-stack development.",
+      "Worked with technologies like HTML, CSS, JavaScript, React, Express, and MongoDB.",
+      "Built and deployed multiple real-world projects, including a full-stack app with authentication and role-based access.",
+    ],
+  },
   {
     yearRange: "2022 - 2024",
     title: "Masters Of Computer Applications",
@@ -97,25 +112,6 @@ export const EDUCATION = [
       "University Name - Maulana Abul Kalam Azad University of Technology",
     ],
   },
-  {
-    yearRange: "2018",
-    title: "Higher Secondary Education",
-    location: "De Nobili CMRI, Dhanbad",
-    description: [
-      "Percentage - 71",
-      "Council for the Indian School Certificate Examinations",
-      "Specialized with Physics, Chemistry and Maths as Major",
-    ],
-  },
-  {
-    yearRange: "2016",
-    title: "Secondary Education",
-    location: "De Nobili CMRI, Dhanbad",
-    description: [
-      "Percentage - 81",
-      "Council for the Indian School Certificate Examinations",
-    ],
-  },
 ];
 
 export const INTERNSHIP = [
@@ -127,16 +123,16 @@ export const INTERNSHIP = [
     image: codeclause,
     project: [
       {
-        name:"Word to Pdf Convertor",
+        name: "Word to Pdf Convertor",
         url: "https://github.com/akash-collab/Word_to_Pdf",
         image: internpro1,
-        desc:"Created using HTML, CSS, Javascript"
+        desc: "Created using HTML, CSS, Javascript"
       },
       {
-        name:"Face Login System",
+        name: "Face Login System",
         url: "https://github.com/akash-collab/Face_Login",
         image: internpro2,
-        desc:"Created using HTML, CSS, Javascript"
+        desc: "Created using HTML, CSS, Javascript"
       }
     ]
   },
