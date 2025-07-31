@@ -1,9 +1,12 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { HERO_CONTENT } from "../constants/index";
 import QRCode from "react-qr-code";
 import akash from "../assets/akash_paul.webp";
 import { Typewriter } from "react-simple-typewriter";
 import "../index.css";
+import { SKILLS } from "../constants/index";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const textVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -37,93 +40,148 @@ const imageVariants = {
 const Hero = () => {
   const resumeURL =
     "https://drive.google.com/file/d/1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj/view?usp=sharing";
-
+    
+  const [isPaused, setIsPaused] = useState(false);
+  const controls = useAnimation();
+  useEffect(() => {
+  controls.start({
+    x: "-50%",
+    transition: {
+      repeat: Infinity,
+      duration: 25,
+      ease: "linear",
+    },
+  });
+}, [controls]);
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    controls.stop();
+  };
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+    controls.start({
+      x: "-50%",
+      transition: {
+        repeat: Infinity,
+        duration: 25,
+        ease: "linear",
+      },
+    });
+  };
   return (
-    <section
-      id="hero"
-      className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white"
-    >
-      {/* Text Content */}
-      <motion.div
-        className="w-full md:w-1/2 p-8"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <motion.h1
-          className="text-2xl md:text-3xl lg:text-5xl my-10 font-semibold tracking-tight"
-          variants={textVariants}
-        >
-          {HERO_CONTENT.greeting}
-        </motion.h1>
+    <>
+      <div className="h-20" />
 
-        {/* Typewriter Effect */}
+      <div className="relative w-full mt-10 flex flex-col items-center z-50">
+      <div className="relative w-[25%] max-w-[400px] h-10 flex items-center rounded-full backdrop-blur-md bg-black/30 shadow-md overflow-hidden group">
+        {/* Fading Edges */}
+        <div className="absolute left-0 top-0 h-full w-8 z-10 bg-gradient-to-r from-black/80 to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 h-full w-8 z-10 bg-gradient-to-l from-black/80 to-transparent pointer-events-none" />
+
+        {/* Animated Scrolling Skills */}
         <motion.div
-          className="relative mb-4 text-xl md:text-2xl lg:text-4xl text-white"
-          variants={textVariants}
+          className="whitespace-nowrap px-6 text-sm font-medium text-white cursor-pointer"
+          initial={{ x: 0 }}
+          animate={controls}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <div className="invisible block">{HERO_CONTENT.introduction}</div>
-          <div className="absolute top-0 left-0">
-            <Typewriter
-              words={[HERO_CONTENT.introduction]}
-              loop={false}
-              cursor
-              cursorStyle="_"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </div>
+          {[...SKILLS, ...SKILLS].map((skill, index) => (
+            <span key={index} className="mx-4 inline-block">
+              {skill}
+            </span>
+          ))}
         </motion.div>
+      </div>
+    </div>
 
-        <motion.p
-          className="text-lg md:text-xl lg:text-2xl text-gray-200"
-          variants={textVariants}
-        >
-          {HERO_CONTENT.description}
-        </motion.p>
-
-        {/* Resume Link & QR Code */}
+      {/* Hero Section */}
+      <section
+        id="hero"
+        className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white -mt-28"
+      >
+        {/* Text Content */}
         <motion.div
-          className="flex items-center space-x-6 mt-8"
-          variants={textVariants}
+          className="w-full md:w-1/2 p-8"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
         >
-          <a
-            href={resumeURL}
-            download
-            rel="noopener noreferrer"
-            target="_blank"
-            className="bg-stone-50 text-stone-900 px-4 py-3 lg:px-5 lg:py-4 rounded-2xl hover:bg-gray-300 font-medium transition"
-            aria-label="Download Resume"
+          <motion.h1
+            className="text-2xl md:text-3xl lg:text-5xl my-10 font-semibold tracking-tight"
+            variants={textVariants}
           >
-            {HERO_CONTENT.resumeLinkText}
-          </a>
+            {HERO_CONTENT.greeting}
+          </motion.h1>
 
-          <div className="ml-4 hidden sm:block text-center">
-            <div className="p-2 border-2 border-white rounded-lg shadow-lg bg-white inline-block">
-              <QRCode value={resumeURL} size={100} />
+          {/* Typewriter Effect */}
+          <motion.div
+            className="relative mb-4 text-xl md:text-2xl lg:text-4xl text-white"
+            variants={textVariants}
+          >
+            <div className="invisible block">{HERO_CONTENT.introduction}</div>
+            <div className="absolute top-0 left-0">
+              <Typewriter
+                words={[HERO_CONTENT.introduction]}
+                loop={false}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
             </div>
-            <p className="mt-2 text-xl text-white font-semibold">Scan Here</p>
-          </div>
-        </motion.div>
-      </motion.div>
+          </motion.div>
 
-      {/* Image Section */}
-      <motion.div
-        className="w-full md:w-1/2 p-8 flex justify-center items-center"
-        initial="hidden"
-        animate="visible"
-        variants={imageVariants}
-        whileHover={{ scale: 0.98, rotate: 2 }}
-      >
-        <motion.img
-          src={akash}
-          alt="Akash Paul"
-          className="rounded-3xl shadow-lg w-[300px] md:w-[350px] lg:w-[400px] h-auto object-cover"
-          loading="lazy"
-        />
-      </motion.div>
-    </section>
+          <motion.p
+            className="text-lg md:text-xl lg:text-2xl text-gray-200"
+            variants={textVariants}
+          >
+            {HERO_CONTENT.description}
+          </motion.p>
+
+          {/* Resume Link & QR Code */}
+          <motion.div
+            className="flex items-center space-x-6 mt-8"
+            variants={textVariants}
+          >
+            <a
+              href={resumeURL}
+              download
+              rel="noopener noreferrer"
+              target="_blank"
+              className="bg-stone-50 text-stone-900 px-4 py-3 lg:px-5 lg:py-4 rounded-2xl hover:bg-gray-300 font-medium transition"
+              aria-label="Download Resume"
+            >
+              {HERO_CONTENT.resumeLinkText}
+            </a>
+
+            <div className="ml-4 hidden sm:block text-center">
+              <div className="p-2 border-2 border-white rounded-lg shadow-lg bg-white inline-block">
+                <QRCode value={resumeURL} size={100} />
+              </div>
+              <p className="mt-2 text-xl text-white font-semibold">Scan Here</p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Image Section */}
+        <motion.div
+          className="w-full md:w-1/2 p-8 flex justify-center items-center"
+          initial="hidden"
+          animate="visible"
+          variants={imageVariants}
+          whileHover={{ scale: 0.98, rotate: 2 }}
+        >
+          <motion.img
+            src={akash}
+            alt="Akash Paul"
+            className="rounded-3xl shadow-lg w-[300px] md:w-[350px] lg:w-[400px] h-auto object-cover"
+            loading="lazy"
+          />
+        </motion.div>
+      </section>
+    </>
   );
 };
 

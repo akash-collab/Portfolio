@@ -18,6 +18,17 @@ export const LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
+export const SKILLS = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Tailwind CSS",
+  "React JS",
+  "Express JS",
+  "Firebase",
+  "MongoDB",
+];
+
 export const HERO_CONTENT = {
   greeting: "Hey there! 🖐️",
   introduction:
@@ -63,6 +74,7 @@ export const PROJECTS = [
     description: "Analyze YouTube comments effortlessly ",
     image: projects5,
     link: "https://github.com/akash-collab/Creator-s_Analysis_Website",
+    deploy:""
   },
   {
     name: "Coffee Shop",
