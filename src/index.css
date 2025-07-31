@@ -16,6 +16,10 @@
   background-image: url("./assets/jason-root.webp");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .roboto-font {
   font-family: 'Roboto', sans-serif;
 }

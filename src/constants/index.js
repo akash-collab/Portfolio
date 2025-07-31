@@ -162,7 +162,7 @@ export const CONTACT_CONTENT = {
     },
     {
       platform: "LinkedIn",
-      url: "https://linkedin.com/in/akashpauldev",
+      url: "https://www.linkedin.com/in/akash-paul-dev/",
       ariaLabel: "Connect with me on LinkedIn",
       icon: "RiLinkedinFill",
     },
