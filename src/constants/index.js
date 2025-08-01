@@ -17,6 +17,11 @@ import reactIcon from "../assets/icons/react.webp";
 import expressIcon from "../assets/icons/express.webp";
 import firebaseIcon from "../assets/icons/firebase.webp";
 import mongodbIcon from "../assets/icons/mongodb.webp";
+import githubIcon from "../assets/icons/github.webp";
+import postmanIcon from "../assets/icons/postman.webp";
+import reduxIcon from "../assets/icons/redux.webp";
+import typescriptIcon from "../assets/icons/typescript.webp";
+import vscodeIcon from "../assets/icons/vscode.webp";
 
 export const LINKS = [
   { href: "#work", label: "Work" },
@@ -35,6 +40,11 @@ export const SKILLS = [
   { name: "Express JS", icon: expressIcon },
   { name: "Firebase", icon: firebaseIcon },
   { name: "MongoDB", icon: mongodbIcon },
+  { name: "TypeScript", icon: typescriptIcon },
+  { name: "Redux", icon: reduxIcon },
+  { name: "Github", icon: githubIcon },
+  { name: "Postman", icon: postmanIcon },
+  { name: "VS Code", icon: vscodeIcon },
 ];
 
 export const HERO_CONTENT = {
@@ -53,21 +63,21 @@ export const PROJECTS = [
     description: "A Book App",
     image: projects1,
     link: "https://github.com/akash-collab/bookverse",
-    deploy:"https://bookverse-beta.vercel.app/"
+    deploy: "https://bookverse-beta.vercel.app/"
   },
   {
     name: "Loan Application System",
     description: "An Interactive and Real-Time Loan Application",
     image: projects2,
     link: "https://github.com/akash-collab/Loan-Application-System",
-    deploy:"https://loan-application-system-lovat.vercel.app/"
+    deploy: "https://loan-application-system-lovat.vercel.app/"
   },
   {
     name: "MealMaster App",
     description: "Personalized meal planner with AI. ",
     image: projects3,
     link: "https://github.com/akash-collab/MealMaster",
-    deploy:"https://mealmaster-frontend.onrender.com"
+    deploy: "https://mealmaster-frontend.onrender.com"
   },
   {
     name: "Weather App",
@@ -75,21 +85,21 @@ export const PROJECTS = [
       "Real-time Weather App providing accurate forecasts",
     image: projects4,
     link: "https://github.com/akash-collab/Weather-Website",
-    deploy:""
+    deploy: ""
   },
   {
     name: "Creator's Analysis Tool",
     description: "Analyze YouTube comments effortlessly ",
     image: projects5,
     link: "https://github.com/akash-collab/Creator-s_Analysis_Website",
-    deploy:""
+    deploy: ""
   },
   {
     name: "Coffee Shop",
     description: "An App for coffee Enthusiasts.",
     image: projects6,
     link: "https://github.com/akash-collab/Coffee_Shop_Full_Responsive_Website",
-    deploy:"coffee-shop-full-responsive-website.vercel.app"
+    deploy: "coffee-shop-full-responsive-website.vercel.app"
   },
 ];
 

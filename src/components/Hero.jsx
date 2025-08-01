@@ -101,8 +101,6 @@ const handleMouseLeave = () => setIsPaused(false);
             </div>
           </motion.div>
 
-          {/* 🔽 Scrolling Skills Marquee 🔽 */}
-          {/* 🔽 Scrolling Skills Marquee 🔽 */}
 <div
   className="relative w-[90%] max-w-[600px] h-12 my-6 flex items-center rounded-md backdrop-blur-md shadow-md overflow-hidden group"
 >
@@ -112,7 +110,7 @@ const handleMouseLeave = () => setIsPaused(false);
 
   {/* Animated Scrolling Skills */}
   <motion.div
-    className="whitespace-nowrap flex min-w-[200%] gap-12 animate-none px-4"
+    className="whitespace-nowrap flex w-max gap-12 animate-none px-4"
     animate={controls}
     initial={{ x: 0 }}
     onMouseEnter={handleMouseEnter}
