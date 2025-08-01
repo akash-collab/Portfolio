@@ -9,6 +9,14 @@ import leetcode from "../assets/leetcode.png";
 import internpro1 from "../assets/internpro1.webp";
 import internpro2 from "../assets/internpro2.webp";
 import resume from "../assets/Akash_Resume.pdf";
+import htmlIcon from "../assets/icons/html.webp";
+import cssIcon from "../assets/icons/css.webp";
+import jsIcon from "../assets/icons/javascript.webp";
+import tailwindIcon from "../assets/icons/tailwind.webp";
+import reactIcon from "../assets/icons/react.webp";
+import expressIcon from "../assets/icons/express.webp";
+import firebaseIcon from "../assets/icons/firebase.webp";
+import mongodbIcon from "../assets/icons/mongodb.webp";
 
 export const LINKS = [
   { href: "#work", label: "Work" },
@@ -19,14 +27,14 @@ export const LINKS = [
 ];
 
 export const SKILLS = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Tailwind CSS",
-  "React JS",
-  "Express JS",
-  "Firebase",
-  "MongoDB",
+  { name: "HTML", icon: htmlIcon },
+  { name: "CSS", icon: cssIcon },
+  { name: "JavaScript", icon: jsIcon },
+  { name: "Tailwind CSS", icon: tailwindIcon },
+  { name: "React JS", icon: reactIcon },
+  { name: "Express JS", icon: expressIcon },
+  { name: "Firebase", icon: firebaseIcon },
+  { name: "MongoDB", icon: mongodbIcon },
 ];
 
 export const HERO_CONTENT = {

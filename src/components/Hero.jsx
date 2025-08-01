@@ -5,8 +5,7 @@ import akash from "../assets/akash_paul.webp";
 import { Typewriter } from "react-simple-typewriter";
 import "../index.css";
 import { SKILLS } from "../constants/index";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const textVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -40,65 +39,34 @@ const imageVariants = {
 const Hero = () => {
   const resumeURL =
     "https://drive.google.com/file/d/1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj/view?usp=sharing";
-    
+
   const [isPaused, setIsPaused] = useState(false);
   const controls = useAnimation();
+
   useEffect(() => {
-  controls.start({
-    x: "-50%",
-    transition: {
-      repeat: Infinity,
-      duration: 25,
-      ease: "linear",
-    },
-  });
-}, [controls]);
-  const handleMouseEnter = () => {
-    setIsPaused(true);
-    controls.stop();
-  };
-  const handleMouseLeave = () => {
-    setIsPaused(false);
+  if (!isPaused) {
     controls.start({
-      x: "-50%",
+      x: "-100%",
       transition: {
         repeat: Infinity,
         duration: 25,
         ease: "linear",
       },
     });
-  };
+  } else {
+    controls.stop();
+  }
+}, [isPaused, controls]);
+
+  const handleMouseEnter = () => setIsPaused(true);
+const handleMouseLeave = () => setIsPaused(false);
+
   return (
     <>
-      <div className="h-20" />
-
-      <div className="relative w-full mt-10 flex flex-col items-center z-50">
-      <div className="relative w-[25%] max-w-[400px] h-10 flex items-center rounded-full backdrop-blur-md bg-black/30 shadow-md overflow-hidden group">
-        {/* Fading Edges */}
-        <div className="absolute left-0 top-0 h-full w-8 z-10 bg-gradient-to-r from-black/80 to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-8 z-10 bg-gradient-to-l from-black/80 to-transparent pointer-events-none" />
-
-        {/* Animated Scrolling Skills */}
-        <motion.div
-          className="whitespace-nowrap px-6 text-sm font-medium text-white cursor-pointer"
-          initial={{ x: 0 }}
-          animate={controls}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          {[...SKILLS, ...SKILLS].map((skill, index) => (
-            <span key={index} className="mx-4 inline-block">
-              {skill}
-            </span>
-          ))}
-        </motion.div>
-      </div>
-    </div>
-
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white -mt-28"
+        className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white "
       >
         {/* Text Content */}
         <motion.div
@@ -132,6 +100,40 @@ const Hero = () => {
               />
             </div>
           </motion.div>
+
+          {/* 🔽 Scrolling Skills Marquee 🔽 */}
+          {/* 🔽 Scrolling Skills Marquee 🔽 */}
+<div
+  className="relative w-[90%] max-w-[600px] h-12 my-6 flex items-center rounded-md backdrop-blur-md shadow-md overflow-hidden group"
+>
+  {/* Fading Edges */}
+  <div className="absolute left-0 top-0 h-full w-6 z-10 bg-gradient-to-r  to-transparent pointer-events-none" />
+  <div className="absolute right-0 top-0 h-full w-6 z-10 bg-gradient-to-l  to-transparent pointer-events-none" />
+
+  {/* Animated Scrolling Skills */}
+  <motion.div
+    className="whitespace-nowrap flex min-w-[200%] gap-12 animate-none px-4"
+    animate={controls}
+    initial={{ x: 0 }}
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+  >
+    {[...SKILLS, ...SKILLS].map((skill, index) => (
+      <div
+        key={index}
+        className="inline-flex items-center gap-2 mx-4 text-base"
+      >
+        <img
+          src={skill.icon}
+          alt={skill.name}
+          className="w-7 h-7 object-contain aspect-square"
+          loading="lazy"
+        />
+        <span>{skill.name}</span>
+      </div>
+    ))}
+  </motion.div>
+</div>
 
           <motion.p
             className="text-lg md:text-xl lg:text-2xl text-gray-200"
@@ -171,13 +173,13 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           variants={imageVariants}
-          whileHover={{ scale: 0.98, rotate: 2 }}
         >
           <motion.img
             src={akash}
             alt="Akash Paul"
             className="rounded-3xl shadow-lg w-[300px] md:w-[350px] lg:w-[400px] h-auto object-cover"
             loading="lazy"
+            whileHover={{ scale: 0.98, rotate: 2 }}
           />
         </motion.div>
       </section>
