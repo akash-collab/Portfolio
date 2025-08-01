@@ -85,7 +85,7 @@ export const PROJECTS = [
       "Real-time Weather App providing accurate forecasts",
     image: projects4,
     link: "https://github.com/akash-collab/Weather-Website",
-    deploy: ""
+    deploy: "https://weather-website-olive.vercel.app/"
   },
   {
     name: "Creator's Analysis Tool",
