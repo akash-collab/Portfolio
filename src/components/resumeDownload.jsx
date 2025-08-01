@@ -3,9 +3,9 @@ import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const ResumeDownload = () => {
   const resumeUrl =
-    "https://drive.google.com/uc?export=download&id=1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj";
+    "https://drive.google.com/file/d/1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h/view?usp=sharing";
   const resumeViewUrl =
-    "https://drive.google.com/file/d/1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj/preview";
+    "https://drive.google.com/file/d/1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h/view?usp=sharing";
 
   const linkedinShare = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
     resumeUrl

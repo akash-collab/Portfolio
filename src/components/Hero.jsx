@@ -38,7 +38,7 @@ const imageVariants = {
 
 const Hero = () => {
   const resumeURL =
-    "https://drive.google.com/file/d/1tFj1gkQqWQMOkrUXWaXmnIKHF6zzlqZj/view?usp=sharing";
+    "https://drive.google.com/file/d/1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h/view?usp=sharing";
 
   const [isPaused, setIsPaused] = useState(false);
   const controls = useAnimation();
