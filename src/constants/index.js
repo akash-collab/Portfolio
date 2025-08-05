@@ -9,42 +9,47 @@ import leetcode from "../assets/leetcode.png";
 import internpro1 from "../assets/internpro1.webp";
 import internpro2 from "../assets/internpro2.webp";
 import resume from "../assets/Akash_Resume.pdf";
-import htmlIcon from "../assets/icons/html.webp";
-import cssIcon from "../assets/icons/css.webp";
-import jsIcon from "../assets/icons/javascript.webp";
-import tailwindIcon from "../assets/icons/tailwind.webp";
-import reactIcon from "../assets/icons/react.webp";
-import expressIcon from "../assets/icons/express.webp";
-import firebaseIcon from "../assets/icons/firebase.webp";
-import mongodbIcon from "../assets/icons/mongodb.webp";
-import githubIcon from "../assets/icons/github.webp";
-import postmanIcon from "../assets/icons/postman.webp";
-import reduxIcon from "../assets/icons/redux.webp";
-import typescriptIcon from "../assets/icons/typescript.webp";
-import vscodeIcon from "../assets/icons/vscode.webp";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaGithub,
+} from 'react-icons/fa';
+import {
+  SiTailwindcss,
+  SiExpress,
+  SiFirebase,
+  SiMongodb,
+  SiTypescript,
+  SiRedux,
+  SiPostman,
+} from 'react-icons/si';
+import { VscVscode } from "react-icons/vsc";
 
 export const LINKS = [
   { href: "#work", label: "Work" },
   { href: "#about", label: "About" },
+  { href: "#techStacks", label: "Tech Stack" },
   { href: "#education", label: "Education" },
   { href: "#internship", label: "Internship" },
   { href: "#contact", label: "Contact" },
 ];
 
 export const SKILLS = [
-  { name: "HTML", icon: htmlIcon },
-  { name: "CSS", icon: cssIcon },
-  { name: "JavaScript", icon: jsIcon },
-  { name: "Tailwind CSS", icon: tailwindIcon },
-  { name: "React JS", icon: reactIcon },
-  { name: "Express JS", icon: expressIcon },
-  { name: "Firebase", icon: firebaseIcon },
-  { name: "MongoDB", icon: mongodbIcon },
-  { name: "TypeScript", icon: typescriptIcon },
-  { name: "Redux", icon: reduxIcon },
-  { name: "Github", icon: githubIcon },
-  { name: "Postman", icon: postmanIcon },
-  { name: "VS Code", icon: vscodeIcon },
+  { name: "HTML", icon: FaHtml5 },
+  { name: "CSS", icon: FaCss3Alt },
+  { name: "JavaScript", icon: FaJs },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
+  { name: "React JS", icon: FaReact, core:true },
+  { name: "Express JS", icon: SiExpress },
+  { name: "Firebase", icon: SiFirebase },
+  { name: "MongoDB", icon: SiMongodb },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "Redux", icon: SiRedux },
+  { name: "Github", icon: FaGithub },
+  { name: "Postman", icon: SiPostman },
+  { name: "VS Code", icon: VscVscode },
 ];
 
 export const HERO_CONTENT = {

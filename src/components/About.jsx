@@ -12,7 +12,7 @@ const About = () => {
   };
 
   return (
-    <section className="px-6 py-10" id="about">
+    <section className="px-6 py-16" id="about">
       <h1 className="text-4xl md:text-6xl font-medium tracking-light mb-10">
         About
       </h1>

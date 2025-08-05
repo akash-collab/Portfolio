@@ -116,20 +116,18 @@ const handleMouseLeave = () => setIsPaused(false);
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
   >
-    {[...SKILLS, ...SKILLS].map((skill, index) => (
-      <div
-        key={index}
-        className="inline-flex items-center gap-2 mx-4 text-base"
-      >
-        <img
-          src={skill.icon}
-          alt={skill.name}
-          className="w-7 h-7 object-contain aspect-square"
-          loading="lazy"
-        />
-        <span>{skill.name}</span>
-      </div>
-    ))}
+    {[...SKILLS, ...SKILLS].map((skill, index) => {
+  const Icon = skill.icon;
+  return (
+    <div
+      key={index}
+      className="inline-flex items-center gap-2 mx-4 text-base"
+    >
+      <Icon className="w-7 h-7" /> 
+      <span>{skill.name}</span>
+    </div>
+  );
+})}
   </motion.div>
 </div>
 

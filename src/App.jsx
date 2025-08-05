@@ -8,6 +8,7 @@ import About from "./components/About";
 import Education from "./components/Education";
 import Internship from "./components/Internship";
 import Contacts from "./components/Contacts";
+import TechStack from "./components/TechStack";
 
 const App = () => {
   const vantaRef = useRef(null);
@@ -43,6 +44,7 @@ const App = () => {
         <Hero />
         <Projects />
         <About />
+        <TechStack />
         <Education />
         <Internship />
         <Contacts />
