@@ -35,7 +35,7 @@ const Projects = () => {
     <section className="px-6 py-20 my-6" id="work">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-white">
-          Project
+          Projects
         </h1>
         <div className="h-1 w-20 mb-12 bg-white"></div>
 

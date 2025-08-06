@@ -28,7 +28,7 @@ import {
 import { VscVscode } from "react-icons/vsc";
 
 export const LINKS = [
-  { href: "#work", label: "Project" },
+  { href: "#work", label: "Projects" },
   { href: "#about", label: "About" },
   { href: "#techStacks", label: "Tech Stack" },
   { href: "#education", label: "Education" },
