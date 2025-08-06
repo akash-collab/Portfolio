@@ -42,7 +42,7 @@ export const SKILLS = [
   { name: "JavaScript", icon: FaJs, category: "Frontend", level: "Intermediate", progress: 85 },
   { name: "Tailwind CSS", icon: SiTailwindcss, category: "Frontend", level: "Intermediate", progress: 75 },
   { name: "React JS", icon: FaReact, category: "Frontend", level: "Advanced", progress: 90, core: true },
-  { name: "Express JS", icon: SiExpress, category: "Backend", level: "Intermediate", progress: 75 },
+  { name: "Express JS", icon: SiExpress, category: "Backend", level: "Beginner", progress: 75 },
   { name: "Firebase", icon: SiFirebase, category: "Backend", level: "Intermediate", progress: 70 },
   { name: "MongoDB", icon: SiMongodb, category: "Backend", level: "Intermediate", progress: 78 },
   { name: "TypeScript", icon: SiTypescript, category: "Frontend", level: "Beginner", progress: 60 },
@@ -65,21 +65,21 @@ export const HERO_CONTENT = {
 export const PROJECTS = [
   {
     name: "BookVerse",
-    description: "A Book App",
+    description: "BookVerse is a responsive, frontend-only book club platform built with Firebase. It enables users to authenticate, suggest books, join threaded discussions, track reading progress, and schedule meetings. Features include rich text comments, dark mode, and real-time updates using Firestore.",
     image: projects1,
     link: "https://github.com/akash-collab/bookverse",
     deploy: "https://bookverse-beta.vercel.app/"
   },
   {
     name: "Loan Application System",
-    description: "An Interactive and Real-Time Loan Application",
+    description: "Loan Application System is a fully responsive, Firebase-powered React + TypeScript app that allows users to apply for loans, track approval status, view EMIs on a calendar, and make repayments. Features include a multi-step form with validation, auto-approval logic, EMI calculator, dark mode, real-time updates, and an intuitive dashboard.",
     image: projects2,
     link: "https://github.com/akash-collab/Loan-Application-System",
     deploy: "https://loan-application-system-lovat.vercel.app/"
   },
   {
     name: "MealMaster App",
-    description: "Personalized meal planner with AI. ",
+    description: "MealMaster is a full-featured meal planning app that helps users create personalized meal plans, track nutrition, and achieve dietary goals. Built with a modern tech stack, it offers recipe search, drag-and-drop weekly planners, calorie and macro tracking, grocery list generation, meal prep reminders, and intelligent AI-based meal suggestions—all tailored to user preferences and fitness goals.",
     image: projects3,
     link: "https://github.com/akash-collab/MealMaster",
     deploy: "https://mealmaster-frontend.onrender.com"
@@ -87,24 +87,24 @@ export const PROJECTS = [
   {
     name: "Weather App",
     description:
-      "Real-time Weather App providing accurate forecasts",
+      "WeatherNow is a sleek, responsive weather app that provides real-time weather updates for any location. Built with Javascript and OpenWeatherMap API, it displays current temperature, humidity, wind speed, and weather conditions with dynamic icons and intuitive UI.",
     image: projects4,
     link: "https://github.com/akash-collab/Weather-Website",
     deploy: "https://weather-website-olive.vercel.app/"
   },
   {
     name: "Creator's Analysis Tool",
-    description: "Analyze YouTube comments effortlessly ",
+    description: "YouTube Sentiment Analysis is a modern web app that analyzes YouTube video comments using Natural Language Processing (TextBlob). It provides interactive sentiment charts, top comment adjectives, and downloadable PDF reports. Built with Flask and Chart.js, it supports real-time analysis of comments ",
     image: projects5,
     link: "https://github.com/akash-collab/Creator-s_Analysis_Website",
     deploy: ""
   },
   {
     name: "Coffee Shop",
-    description: "An App for coffee Enthusiasts.",
+    description: "Coffee Shop Website is a fully responsive frontend project with a modern UI, featuring product listings, cart and wishlist UI, interactive previews, blog toggles, search, and a styled contact form.",
     image: projects6,
     link: "https://github.com/akash-collab/Coffee_Shop_Full_Responsive_Website",
-    deploy: "coffee-shop-full-responsive-website.vercel.app"
+    deploy: "https://coffee-shop-full-responsive-website.vercel.app"
   },
 ];
 

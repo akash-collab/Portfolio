@@ -43,39 +43,42 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.name}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
 
-              {/* Overlay */}
-              <div className="relative z-20 p-6 flex flex-col justify-between h-full bg-black/40 text-white transition duration-300">
-                <h2 className="text-2xl font-semibold mb-4 drop-shadow">
-                  {project.name}
-                </h2>
-                <div className="flex flex-col justify-between flex-grow">
-                  <p className="mb-4 text-lg drop-shadow">{project.description}</p>
-                  <div className="flex gap-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white text-stone-900 rounded-full py-2 px-4 w-fit text-sm font-semibold hover:bg-gray-200 transition"
-                    >
-                      View on GitHub
-                    </a>
+              {/* Project Name & Description (hover only) */}
+              {/* Project Name (always visible) */}
+              <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-md text-lg font-semibold z-10 backdrop-blur-sm">
+                {project.name}
+              </div>
 
-                    {project.deploy && (
-                      <a
-                        href={project.deploy.startsWith("http") ? project.deploy : `https://${project.deploy}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-green-500 text-white rounded-full py-2 px-4 w-fit text-sm font-semibold hover:bg-green-600 transition"
-                      >
-                        View Live
-                      </a>
-                    )}
-                  </div>
-                </div>
+              {/* Project Description (hover only) */}
+              <div className="absolute inset-0 bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 backdrop-blur-sm flex flex-col justify-center">
+                <p className="text-base drop-shadow">{project.description}</p>
+              </div>
+
+              {/* Buttons: Always visible at bottom */}
+              <div className="absolute bottom-4 left-4 right-4 flex gap-4 z-10">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-stone-900 rounded-full py-2 px-4 text-sm font-semibold hover:bg-gray-200 transition"
+                >
+                  View on GitHub
+                </a>
+
+                {project.deploy && (
+                  <a
+                    href={project.deploy.startsWith("http") ? project.deploy : `https://${project.deploy}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-500 text-white rounded-full py-2 px-4 text-sm font-semibold hover:bg-green-600 transition"
+                  >
+                    View Live
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
