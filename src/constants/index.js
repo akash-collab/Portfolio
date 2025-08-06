@@ -65,6 +65,7 @@ export const HERO_CONTENT = {
 export const PROJECTS = [
   {
     name: "BookVerse",
+    type: "Frontend",
     description: "BookVerse is a responsive, frontend-only book club platform built with Firebase. It enables users to authenticate, suggest books, join threaded discussions, track reading progress, and schedule meetings. Features include rich text comments, dark mode, and real-time updates using Firestore.",
     image: projects1,
     link: "https://github.com/akash-collab/bookverse",
@@ -72,6 +73,7 @@ export const PROJECTS = [
   },
   {
     name: "Loan Application System",
+    type: "Frontend",
     description: "Loan Application System is a fully responsive, Firebase-powered React + TypeScript app that allows users to apply for loans, track approval status, view EMIs on a calendar, and make repayments. Features include a multi-step form with validation, auto-approval logic, EMI calculator, dark mode, real-time updates, and an intuitive dashboard.",
     image: projects2,
     link: "https://github.com/akash-collab/Loan-Application-System",
@@ -79,6 +81,7 @@ export const PROJECTS = [
   },
   {
     name: "MealMaster App",
+    type: "Fullstack",
     description: "MealMaster is a full-featured meal planning app that helps users create personalized meal plans, track nutrition, and achieve dietary goals. Built with a modern tech stack, it offers recipe search, drag-and-drop weekly planners, calorie and macro tracking, grocery list generation, meal prep reminders, and intelligent AI-based meal suggestions—all tailored to user preferences and fitness goals.",
     image: projects3,
     link: "https://github.com/akash-collab/MealMaster",
@@ -86,6 +89,7 @@ export const PROJECTS = [
   },
   {
     name: "Weather App",
+    type: "Frontend",
     description:
       "WeatherNow is a sleek, responsive weather app that provides real-time weather updates for any location. Built with Javascript and OpenWeatherMap API, it displays current temperature, humidity, wind speed, and weather conditions with dynamic icons and intuitive UI.",
     image: projects4,
@@ -94,6 +98,7 @@ export const PROJECTS = [
   },
   {
     name: "Creator's Analysis Tool",
+    type: "Backend",
     description: "YouTube Sentiment Analysis is a modern web app that analyzes YouTube video comments using Natural Language Processing (TextBlob). It provides interactive sentiment charts, top comment adjectives, and downloadable PDF reports. Built with Flask and Chart.js, it supports real-time analysis of comments ",
     image: projects5,
     link: "https://github.com/akash-collab/Creator-s_Analysis_Website",
@@ -101,6 +106,7 @@ export const PROJECTS = [
   },
   {
     name: "Coffee Shop",
+    type: "Frontend",
     description: "Coffee Shop Website is a fully responsive frontend project with a modern UI, featuring product listings, cart and wishlist UI, interactive previews, blog toggles, search, and a styled contact form.",
     image: projects6,
     link: "https://github.com/akash-collab/Coffee_Shop_Full_Responsive_Website",
@@ -120,7 +126,7 @@ export const EDUCATION = [
   {
     yearRange: "2025",
     title: "Full-Stack Web Development",
-    location: "MASAI School, Bangalore",
+    location: "Masai School, Bangalore",
     description: [
       "Completed a 35-week intensive training program focused on full-stack development.",
       "Worked with technologies like HTML, CSS, JavaScript, React, Express, and MongoDB.",

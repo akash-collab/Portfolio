@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { PROJECTS } from "../constants/index";
 
+const filterOptions = ["All", "Frontend", "Backend", "Fullstack"];
+
 const Projects = () => {
+  const [filter, setFilter] = useState("All");
+
+  const filteredProjects =
+    filter === "All"
+      ? PROJECTS
+      : PROJECTS.filter((project) => project.type === filter);
+
   const projectVariants = {
     hidden: {
       opacity: 0,
@@ -29,8 +39,26 @@ const Projects = () => {
         </h1>
         <div className="h-1 w-20 mb-12 bg-white"></div>
 
+        {/* Filter Buttons */}
+        <div className="flex gap-4 mb-10 flex-wrap">
+          {filterOptions.map((option) => (
+            <button
+              key={option}
+              onClick={() => setFilter(option)}
+              className={`px-4 py-2 rounded-full font-semibold border transition-all duration-300 ${
+                filter === option
+                  ? "bg-white text-black"
+                  : "bg-transparent text-white border-white hover:bg-white hover:text-black"
+              }`}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+
+        {/* Project Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PROJECTS.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={index}
               className="relative rounded-xl overflow-hidden h-[500px] shadow-lg group"
@@ -39,7 +67,6 @@ const Projects = () => {
               viewport={{ once: true }}
               variants={projectVariants}
             >
-              {/* Project Image */}
               <img
                 src={project.image}
                 alt={project.name}
@@ -47,7 +74,6 @@ const Projects = () => {
                 loading="lazy"
               />
 
-              {/* Project Name & Description (hover only) */}
               {/* Project Name (always visible) */}
               <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-md text-lg font-semibold z-10 backdrop-blur-sm">
                 {project.name}
@@ -71,7 +97,11 @@ const Projects = () => {
 
                 {project.deploy && (
                   <a
-                    href={project.deploy.startsWith("http") ? project.deploy : `https://${project.deploy}`}
+                    href={
+                      project.deploy.startsWith("http")
+                        ? project.deploy
+                        : `https://${project.deploy}`
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 text-white rounded-full py-2 px-4 text-sm font-semibold hover:bg-green-600 transition"
