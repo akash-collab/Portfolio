@@ -22,6 +22,7 @@
     "react-icons": "^5.4.0",
     "react-qr-code": "^2.0.18",
     "react-simple-typewriter": "^5.0.1",
+    "tailwindcss-3d": "^1.1.0",
     "three": "^0.172.0",
     "vanta": "^0.5.24"
   },

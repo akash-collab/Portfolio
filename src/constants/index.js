@@ -37,19 +37,19 @@ export const LINKS = [
 ];
 
 export const SKILLS = [
-  { name: "HTML", icon: FaHtml5 },
-  { name: "CSS", icon: FaCss3Alt },
-  { name: "JavaScript", icon: FaJs },
-  { name: "Tailwind CSS", icon: SiTailwindcss },
-  { name: "React JS", icon: FaReact, core:true },
-  { name: "Express JS", icon: SiExpress },
-  { name: "Firebase", icon: SiFirebase },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "TypeScript", icon: SiTypescript },
-  { name: "Redux", icon: SiRedux },
-  { name: "Github", icon: FaGithub },
-  { name: "Postman", icon: SiPostman },
-  { name: "VS Code", icon: VscVscode },
+  { name: "HTML", icon: FaHtml5, category: "Frontend", level: "Intermediate", progress: 80 },
+  { name: "CSS", icon: FaCss3Alt, category: "Frontend", level: "Intermediate", progress: 80 },
+  { name: "JavaScript", icon: FaJs, category: "Frontend", level: "Intermediate", progress: 85 },
+  { name: "Tailwind CSS", icon: SiTailwindcss, category: "Frontend", level: "Intermediate", progress: 75 },
+  { name: "React JS", icon: FaReact, category: "Frontend", level: "Advanced", progress: 90, core: true },
+  { name: "Express JS", icon: SiExpress, category: "Backend", level: "Intermediate", progress: 75 },
+  { name: "Firebase", icon: SiFirebase, category: "Backend", level: "Intermediate", progress: 70 },
+  { name: "MongoDB", icon: SiMongodb, category: "Backend", level: "Intermediate", progress: 78 },
+  { name: "TypeScript", icon: SiTypescript, category: "Frontend", level: "Beginner", progress: 60 },
+  { name: "Redux", icon: SiRedux, category: "Frontend", level: "Intermediate", progress: 70 },
+  { name: "Github", icon: FaGithub, category: "Tools", level: "Intermediate", progress: 85 },
+  { name: "Postman", icon: SiPostman, category: "Tools", level: "Intermediate", progress: 80 },
+  { name: "VS Code", icon: VscVscode, category: "Tools", level: "Intermediate", progress: 90 },
 ];
 
 export const HERO_CONTENT = {
