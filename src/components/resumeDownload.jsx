@@ -1,15 +1,18 @@
+import React from "react";
 import QRCode from "qrcode.react";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const ResumeDownload = () => {
   const resumeUrl =
-    "https://drive.google.com/file/d/1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h/view?usp=sharing";
+    "https://drive.google.com/uc?export=download&id=1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h";
+
   const resumeViewUrl =
-    "https://drive.google.com/file/d/1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h/view?usp=sharing";
+    "https://drive.google.com/file/d/1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h/preview";
 
   const linkedinShare = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
     resumeUrl
   )}&title=Check%20out%20my%20resume!`;
+
   const emailShare = `mailto:?subject=My%20Resume&body=Hi,%20check%20out%20my%20resume%20here:%20${encodeURIComponent(
     resumeUrl
   )}`;

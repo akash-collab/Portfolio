@@ -38,7 +38,7 @@ const imageVariants = {
 
 const Hero = () => {
   const resumeURL =
-    "https://drive.google.com/file/d/1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h/view?usp=sharing";
+    "https://drive.google.com/uc?export=download&id=1mgj3iVu_6cC4bMm55qsEJP25txBWNo4h";
 
   const [isPaused, setIsPaused] = useState(false);
   const controls = useAnimation();
@@ -145,7 +145,6 @@ const handleMouseLeave = () => setIsPaused(false);
           >
             <a
               href={resumeURL}
-              download
               rel="noopener noreferrer"
               target="_blank"
               className="bg-stone-50 text-stone-900 px-4 py-3 lg:px-5 lg:py-4 rounded-2xl hover:bg-gray-300 font-medium transition"
