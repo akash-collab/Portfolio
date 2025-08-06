@@ -17,10 +17,12 @@ const TechStack = () => {
       id="techStacks"
       className="px-6 py-16 md:px-8 lg:px-20 flex flex-col items-center"
     >
-      <h1 className="text-4xl md:text-6xl font-medium tracking-light mb-10 text-white">
-        Tech Stack
-      </h1>
-      <div className="h-1 w-20 mb-8 bg-white"></div>
+      <div className="w-full max-w-6xl self-start mb-10">
+        <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-white mb-6">
+          Tech Stack
+        </h1>
+        <div className="h-1 w-20 mb-12 bg-white"></div>
+      </div>
 
       {/* Category Filters */}
       <div className="mb-10 flex flex-wrap gap-4 justify-center">
@@ -29,8 +31,8 @@ const TechStack = () => {
             key={category}
             onClick={() => setSelectedCategory(category)}
             className={`px-4 py-2 rounded-full border transition duration-300 text-sm md:text-base ${selectedCategory === category
-                ? "bg-[#38bdf8] text-white border-[#38bdf8]"
-                : "text-gray-300 border-gray-600 hover:border-[#38bdf8] hover:text-white"
+              ? "bg-[#38bdf8] text-white border-[#38bdf8]"
+              : "text-gray-300 border-gray-600 hover:border-[#38bdf8] hover:text-white"
               }`}
           >
             {category}
