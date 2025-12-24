@@ -64,14 +64,6 @@ export const HERO_CONTENT = {
 
 export const PROJECTS = [
   {
-    name: "BookVerse",
-    type: "Frontend",
-    description: "BookVerse is a responsive, frontend-only book club platform built with Firebase. It enables users to authenticate, suggest books, join threaded discussions, track reading progress, and schedule meetings. Features include rich text comments, dark mode, and real-time updates using Firestore.",
-    image: projects1,
-    link: "https://github.com/akash-collab/bookverse",
-    deploy: "https://bookverse-beta.vercel.app/"
-  },
-  {
     name: "Loan Application System",
     type: "Frontend",
     description: "Loan Application System is a fully responsive, Firebase-powered React + TypeScript app that allows users to apply for loans, track approval status, view EMIs on a calendar, and make repayments. Features include a multi-step form with validation, auto-approval logic, EMI calculator, dark mode, real-time updates, and an intuitive dashboard.",
@@ -86,6 +78,14 @@ export const PROJECTS = [
     image: projects3,
     link: "https://github.com/akash-collab/MealMaster",
     deploy: "https://mealmaster-frontend.onrender.com"
+  },
+  {
+    name: "BookVerse",
+    type: "Frontend",
+    description: "BookVerse is a responsive, frontend-only book club platform built with Firebase. It enables users to authenticate, suggest books, join threaded discussions, track reading progress, and schedule meetings. Features include rich text comments, dark mode, and real-time updates using Firestore.",
+    image: projects1,
+    link: "https://github.com/akash-collab/bookverse",
+    deploy: "https://bookverse-beta.vercel.app/"
   },
   {
     name: "Weather App",
